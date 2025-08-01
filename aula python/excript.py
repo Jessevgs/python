@@ -5,8 +5,8 @@ class Compra:
 idade = 18
 
 if ( idade < 18) :
-  print("e de menor")
+  print("ele é de menor de idade")
 else :
-  print("e de maior")  
+  print("ele é de maior de idade")  
   
 
