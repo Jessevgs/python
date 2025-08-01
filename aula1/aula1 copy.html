@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aula2.css">
+    <title>Chat AI</title>
+    <div id="response"></div>
+</head>
+<script>
+    document.getElementById('chatForm').addEventListener('submit', async (e) =>{e.preventDefault()});
+    const userinput = document.getElementById("user-input").value;
+
+    const response = await fetch('/chat', {
+        method:'POST',
+        headers:{'content-type': 'appplication/JSON'},
+        bory: json.stringify({
+            question:userinput
+        })
+
+    });
+
+    const data = await response.json();
+    document.getElementById('response').innerText = data.reply;
+
+</script>
+<body>
+    <div class="container">
+        <div class="overlay">
+            <div class="ai-logo">
+                <span class="ai-text">Chat Ai</span>
+            </div>
+            <div class="input-container">
+                <form id="chatForm">
+                <input type="text"  id="userinput" placeholder="Digite sua pergunta:" class="input-field">
+                <button class="send-button">Enviar</button>
+                </form> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+ 
