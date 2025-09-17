@@ -1,6 +1,5 @@
-frase = 'p python é uma linguagem de programação' \
-         'multiparadigma ' \
-         'python foi criado por Guido van Rossum .'
+
+frase = 'O rato roeu a roupa do rei de Roma'
 
 i = 0
 while i < len(frase):
