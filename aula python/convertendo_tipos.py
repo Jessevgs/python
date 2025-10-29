@@ -61,7 +61,7 @@ def index():
             resultado = qa_chain({"question": pergunta, "chat_history": historico})
             resposta = resultado["answer"]
             historico.append((pergunta, resposta))
-    return render_template("index.html", resposta=resposta)
+    return render_template("aula1 copy.html", resposta=resposta)
 
 if __name__ == "__main__":
     app.run(debug=True)
